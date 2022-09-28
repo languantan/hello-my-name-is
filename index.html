@@ -1,0 +1,29 @@
+<html>
+<head>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Chewy);
+
+    h1 {
+      text-align: center;
+      font-family: "Chewy";
+      font-size: 25em;
+      margin: 0 auto;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<h1>Ryan!</h1>
+<script type="text/javascript">
+document.onkeydown = function(e) {
+  let display = document.querySelector('h1');
+  let current = display.innerHTML;
+  display.innerHTML = (current+ String.fromCharCode(e.keyCode)) .slice(current.length - 4);
+  first = Math.floor((e.keyCode-32)/58*255).toString(16).padStart(2, '0');
+  second = Math.floor((e.keyCode-32)/90*255).toString(16).padStart(2, '0');
+  display.style.color = `#${first}cc44`;
+  console.log(first, first, first)
+}
+</script>
+</body>
+</html>
